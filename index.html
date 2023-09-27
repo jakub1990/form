@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-col">
+           <div class="logo">
+              <img src="odin.png" alt="logo-odin">
+              <h1>Odin</h1>
+           </div>
+        </div>
+        <div class="right-col">
+            <div class="description">
+                <p>This is not a real online service! You know you need something like this in your life to help realize your deepest dreams. <br>Sign up now to get started.</p>
+                <p class="slogan">You <em>know</em> you want to!</p>
+            </div>
+            <form action="" method="post">
+                <h2>Let's do this!</h2>
+                <div class="form-inputs">
+                  <div class="form-left">
+                    <div class="input-group">
+                      <label for="first">First Name</label>
+                      <input type="text" required id="first">
+                    </div> 
+                  <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" required id="email">
+                  </div>
+                  <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" required id="password">
+                    <p id="message"></p>
+                  </div>
+                </div>
+                <div class="form-right">
+                    <div class="input-group">
+                        <label for="last">Last Name</label>
+                        <input type="text" required id="last">
+                      </div> 
+                    <div class="input-group">
+                      <label for="phone">Phone Number</label>
+                      <input type="tel" required id="phone">
+                    </div>
+                    <div class="input-group">
+                      <label for="confirm-password">Confirm Password</label>
+                      <input type="password" required id="confirm-password">
+                    </div> 
+                  </div>
+                </div>
+                <input type="submit" class="submit" value="Create Account">
+            </form>
+            <p class="login">Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+
+const passwordForm = document.querySelector("form");
+const passwordInput = document.querySelector("#password");
+const confirmPasswordInput = document.querySelector("#confirm-password");
+const message = document.querySelector("#message");
+
+passwordForm.addEventListener("submit", function (event) {
+  const password = passwordInput.value;
+  const confirmPassword = confirmPasswordInput.value;
+
+  if (password !== confirmPassword) {
+    message.textContent = "Passwords don't match";
+    message.style.color = "red";
+    event.preventDefault(); // Zatrzymaj domyślne zachowanie formularza
+  }
+});
+
+</script>

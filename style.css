@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'Norse Bold';
+    src: url('Norse-Bold.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #000;
+}
+
+body {
+    font-family: Arial;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-col {
+    background-image: url('leafs.jpg');
+    background-size: cover;
+    height: 100%;
+    flex: 1;
+    background-position: center;
+}
+
+.logo {
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.logo h1 {
+    color: #fff;
+    font-family: 'Norse Bold';
+    font-size: 72px;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.right-col {
+    flex: 2;
+}
+
+
+.right-col {
+    background: #eee;
+}
+
+.description {
+    margin-top: 170px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+form h2 {
+    background: #fff;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 50px 0 0;
+
+} 
+
+.description p, .form-inputs, form + p {
+    padding: 0 30px;
+}
+
+form h2 {
+    padding: 20px 30px;
+}
+
+input[type="submit"] {
+    margin: 20px 0 20px 20px;
+    background: #596D48;
+    color: #fff;
+    padding: 15px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: #596D48;
+}
+
+.login {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+p.slogan {
+    padding: 31px;
+}
+
+.form-inputs {
+    background: #fff;
+    display: flex;
+    padding-bottom: 40px;
+    box-shadow: 3px 11px 8px -4px rgba(181,179,181,1);
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: lightblue;
+    box-shadow: 3px 11px 8px -4px rgba(181,179,181,1);
+}
+
+.password-info {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-col, .right-col {
+        flex: 1;
+    }
+
+    .description {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .form-inputs {
+        flex-direction: column;
+    }
+}
